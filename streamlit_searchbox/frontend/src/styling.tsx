@@ -78,9 +78,17 @@ function buildStyleSelect(theme: any): any {
     menuList: (styles: any) => ({
       ...styles,
       backgroundColor: theme.backgroundColor,
+      border: "1px solid " + theme.primaryColor,
+      // position: "fixed"
     }),
     // filler text and icons
-    input: (styles: any) => ({ ...styles, color: theme.textColor }),
+    input: (styles: any) => ({
+      ...styles,
+      color: theme.textColor,
+      input: {
+        opacity: "1 !important",
+      }
+    }),
     //
     singleValue: (styles: any) => ({
       ...styles,
